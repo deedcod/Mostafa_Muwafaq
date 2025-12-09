@@ -21,15 +21,19 @@
   </script>
 
   <link rel="stylesheet" href="style.css" />
+  
+  <!-- ربط ملف التأثيرات الاحترافية -->
+  <script src="assets/animations.js" defer></script>
 </head>
 <body>
   <header class="top-bar">
+    <!-- استبدل/حدّث جزء الهيدر كما في index (أضف زر lang-toggle و data-i18n على الروابط) -->
     <div class="container header-container">
       <div class="logo-title">
         <span class="site-logo-circle">DM</span>
         <div class="site-text">
-          <span class="site-name">Dream Media</span>
-          <span class="site-caption">التسويق والحلول الإعلامية</span>
+          <span class="site-name" data-i18n="siteName">Dream Media</span>
+          <span class="site-caption" data-i18n="siteCaption">التسويق والحلول الإعلامية</span>
         </div>
       </div>
 
@@ -37,21 +41,25 @@
         <button id="theme-toggle" class="theme-toggle" aria-label="تبديل الثيم" title="تبديل الثيم">
           <span class="icon">🌙</span>
         </button>
+        <button id="lang-toggle" class="lang-toggle" aria-label="تبديل اللغة" title="تبديل اللغة">
+          <span class="lang-label">EN</span>
+        </button>
       </div>
 
       <nav class="main-nav">
-        <a href="index.html">الرئيسية</a>
-        <a href="#training">التدريب</a>
-        <a href="#contact">تواصل</a>
-        <a href="locations.html" aria-current="page">أماكن الورش</a>
+        <a href="index.html" data-i18n="nav.home">الرئيسية</a>
+        <a href="#training" data-i18n="nav.training">التدريب</a>
+        <a href="#contact" data-i18n="nav.contact">تواصل</a>
+        <a href="locations.html" aria-current="page" data-i18n="nav.locations">أماكن الورش</a>
       </nav>
     </div>
   </header>
 
   <main class="container">
+    <!-- ضع data-i18n في العنوان والوصف وبطاقات الأماكن -->
     <section class="locations-hero">
-      <h1>أماكن ورش العمل التي قُدمت</h1>
-      <p>قائمة بالأماكن والمؤسسات التي قدّمتُ فيها ورش عمل وبرامج تدريبية — للاطلاع على التفاصيل أو طلب تكرار الورشة تواصل معي.</p>
+      <h1 data-i18n="locations.title">أماكن ورش العمل التي قُدمت</h1>
+      <p data-i18n="locations.caption">قائمة بالأماكن والمؤسسات التي قدّمتُ فيها ورش عمل وبرامج تدريبية — للاطلاع على التفاصيل أو طلب تكرار الورشة تواصل معي.</p>
     </section>
 
     <section class="locations-list section">
@@ -59,40 +67,40 @@
         <!-- مثال بطاقة مكان -->
         <article class="location-card">
           <div class="loc-meta">
-            <h3>جامعة بغداد</h3>
-            <span class="dates">مارس 2024</span>
+            <h3 data-i18n="location.1.title">جامعة بغداد</h3>
+            <span class="dates" data-i18n="location.1.date">مارس 2024</span>
           </div>
-          <div class="venue">كلية الإدارة/قاعة المحاضرات الرئيسية</div>
-          <p class="desc">ورشة تدريبية مكثفة في التسويق الرقمي وتطبيقات الذكاء الاصطناعي لتحسين أداء فرق التسويق.</p>
+          <div class="venue" data-i18n="location.1.venue">كلية الإدارة/قاعة المحاضرات الرئيسية</div>
+          <p class="desc" data-i18n="location.1.desc">ورشة تدريبية مكثفة في التسويق الرقمي وتطبيقات الذكاء الاصطناعي لتحسين أداء فرق التسويق.</p>
           <div class="actions">
-            <a class="map-btn" href="https://maps.google.com" target="_blank" rel="noopener">عرض على الخريطة</a>
-            <a class="map-btn" href="mailto:info@dreammedia.com">اطلب إعادة الورشة</a>
+            <a class="map-btn" data-i18n="location.map" href="https://maps.google.com" target="_blank" rel="noopener">عرض على الخريطة</a>
+            <a class="map-btn" data-i18n="location.request" href="mailto:info@dreammedia.com">اطلب إعادة الورشة</a>
           </div>
         </article>
 
         <article class="location-card">
           <div class="loc-meta">
-            <h3>مركز فرصة للتدريب</h3>
-            <span class="dates">أكتوبر 2023</span>
+            <h3 data-i18n="location.2.title">مركز فرصة للتدريب</h3>
+            <span class="dates" data-i18n="location.2.date">أكتوبر 2023</span>
           </div>
-          <div class="venue">بغداد - شارع الرشيد</div>
-          <p class="desc">سلسلة ورش تطبيقية لبناء أنظمة تسويق ومبيعات داخل الشركات الناشئة.</p>
+          <div class="venue" data-i18n="location.2.venue">بغداد - شارع الرشيد</div>
+          <p class="desc" data-i18n="location.2.desc">سلسلة ورش تطبيقية لبناء أنظمة تسويق ومبيعات داخل الشركات الناشئة.</p>
           <div class="actions">
-            <a class="map-btn" href="https://maps.google.com" target="_blank" rel="noopener">عرض على الخريطة</a>
-            <a class="map-btn" href="mailto:info@dreammedia.com">اطلب إعادة الورشة</a>
+            <a class="map-btn" data-i18n="location.map" href="https://maps.google.com" target="_blank" rel="noopener">عرض على الخريطة</a>
+            <a class="map-btn" data-i18n="location.request" href="mailto:info@dreammedia.com">اطلب إعادة الورشة</a>
           </div>
         </article>
 
         <article class="location-card">
           <div class="loc-meta">
-            <h3>شركة XYZ للاتصالات</h3>
-            <span class="dates">نوفمبر 2022</span>
+            <h3 data-i18n="location.3.title">شركة XYZ للاتصالات</h3>
+            <span class="dates" data-i18n="location.3.date">نوفمبر 2022</span>
           </div>
-          <div class="venue">البصرة - مقر الشركة</div>
-          <p class="desc">ورشة داخلية لتحويل فرق التسويق للعمل بمنهجية تعتمد على البيانات وتحليل الحملات.</p>
+          <div class="venue" data-i18n="location.3.venue">البصرة - مقر الشركة</div>
+          <p class="desc" data-i18n="location.3.desc">ورشة داخلية لتحويل فرق التسويق للعمل بمنهجية تعتمد على البيانات وتحليل الحملات.</p>
           <div class="actions">
-            <a class="map-btn" href="https://maps.google.com" target="_blank" rel="noopener">عرض على الخريطة</a>
-            <a class="map-btn" href="mailto:info@dreammedia.com">اطلب إعادة الورشة</a>
+            <a class="map-btn" data-i18n="location.map" href="https://maps.google.com" target="_blank" rel="noopener">عرض على الخريطة</a>
+            <a class="map-btn" data-i18n="location.request" href="mailto:info@dreammedia.com">اطلب إعادة الورشة</a>
           </div>
         </article>
 
@@ -103,9 +111,12 @@
 
   <footer class="footer">
     <div class="container footer-container">
-      <p>© جميع الحقوق محفوظة لـ مصطفى موفق – دريم ميديا.</p>
+      <p data-i18n="footer.copy">© جميع الحقوق محفوظة لـ مصطفى موفق – دريم ميديا.</p>
     </div>
   </footer>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top" title="Back to top">↑</button>
 
   <script>
     (function() {
@@ -124,6 +135,24 @@
         if (window.__dm_safeSet) window.__dm_safeSet('dm_theme', t);
         else { try { localStorage.setItem('dm_theme', t); } catch(e){} }
         updateIcon(t);
+        document.documentElement.classList.add('theme-switching');
+        setTimeout(function(){ document.documentElement.classList.remove('theme-switching'); }, 300);
+      });
+    })();
+  </script>
+
+  <!-- ربط ملف الترجمة الموحد -->
+  <script src="assets/i18n.js"></script>
+
+  <script>
+    (function(){
+      var btn = document.getElementById('back-to-top');
+      if(!btn) return;
+      window.addEventListener('scroll', function(){
+        btn.classList.toggle('show', window.pageYOffset > 300);
+      });
+      btn.addEventListener('click', function(){
+        window.scrollTo({ top: 0, behavior: 'smooth' });
       });
     })();
   </script>
