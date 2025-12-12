@@ -54,15 +54,7 @@
           </button>
         </div>
 
-        <nav class="main-nav">
-          <a href="#about" data-i18n="nav.about">من هو مصطفى؟</a>
-          <a href="#experience" data-i18n="nav.experience">الخبرة</a>
-          <a href="#companies" data-i18n="nav.companies">الشركات</a>
-          <a href="#training" data-i18n="nav.training">التدريب</a>
-          <a href="#services" data-i18n="nav.services">الخدمات</a>
-          <a href="#contact" data-i18n="nav.contact">تواصل</a>
-          <a href="locations.html" data-i18n="nav.locations">أماكن الورش</a>
-        </nav>
+        
       </div>
     </header>
 
@@ -503,12 +495,12 @@
           <div class="events-grid">
             <div class="event-card">
               <div class="event-image">
-                <img src="assets/events/digital_marketing.jpg" alt="معرض التكنولوجيا والتسويق" loading="lazy">
+                <img src="assets/events/baghdad_ai.jpg" alt="قمة بغداد للذكاء الاصطناعي " loading="lazy">
               </div>
               <div class="event-content">
                 <div class="event-header">
-                  <h3 class="event-title" data-i18n="events.tech.title">معرض التكنولوجيا والتسويق</h3>
-                  <span class="event-date" data-i18n="events.tech.date">10-12 يناير 2025</span>
+                  <h3 class="event-title" data-i18n="events.tech.title">قمة بغداد للذكاءالاصطناعي</h3>
+                  <span class="event-date" data-i18n="events.tech.date">12-12 ديسمبر  2025</span>
                 </div>
                 <p class="event-desc" data-i18n="events.tech.desc">المعرض الأكبر في العراق للتكنولوجيا والتسويق الرقمي، مع مشاركة أكثر من 50 شركة و2000 زائر.</p>
                 <div class="event-meta">
@@ -528,12 +520,12 @@
 
             <div class="event-card">
               <div class="event-image">
-                <img src="assets/events/baghdad_realestate.jpg" alt="معرض العقارات والاستثمار" loading="lazy">
+                <img src="assets/events/digital_marketing.jpg" alt="معرض التسويق الرقمي" loading="lazy">
               </div>
               <div class="event-content">
                 <div class="event-header">
-                  <h3 class="event-title" data-i18n="events.realestate.title">معرض العقارات والاستثمار</h3>
-                  <span class="event-date" data-i18n="events.realestate.date">15-17 فبراير 2025</span>
+                  <h3 class="event-title" data-i18n="events.marketing.title">معرض التسويق الرقمي</h3>
+                  <span class="event-date" data-i18n="events.marketing.date">15-17 فبراير 2024</span>
                 </div>
                 <p class="event-desc" data-i18n="events.realestate.desc">فرصة مميزة للتعرف على أحدث مشاريع العقار في العراق، مع ورش عمل متخصصة في التسويق العقاري.</p>
                 <div class="event-meta">
@@ -553,16 +545,16 @@
 
             <div class="event-card">
               <div class="event-image">
-                <img src="assets/events/baghdad_ai.jpg" alt="مؤتمر التعليم والتدريب" loading="lazy">
+                <img src="assets/events/baghdad_realestate.jpg" alt="ملتقى بغداد العقاري " loading="lazy">
               </div>
               <div class="event-content">
                 <div class="event-header">
-                  <h3 class="event-title" data-i18n="events.education.title">مؤتمر التعليم والتدريب</h3>
-                  <span class="event-date" data-i18n="events.education.date">20-22 مارس 2025</span>
+                  <h3 class="event-title" data-i18n="events.education.title">ملتقى بغداد العقاري </h3>
+                  <span class="event-date" data-i18n="events.education.date">20-22 سبتمبر 2025</span>
                 </div>
                 <p class="event-desc" data-i18n="events.education.desc">مؤتمر سنوي يجمع خبراء التعليم والتدريب في العراق، مع ورش عمل متخصصة وفرص تدريب.</p>
                 <div class="event-meta">
-                  <span class="event-location" data-i18n="events.education.location">📍 بغداد - فندق المنصور</span>
+                  <span class="event-location" data-i18n="events.education.location">📍 بغداد - زيونة</span>
                   <span class="event-time" data-i18n="events.education.time">🕐 8 صباحاً - 5 مساءً</span>
                 </div>
                 <div class="event-attendees">
@@ -634,10 +626,21 @@
       <div class="container footer-container">
         <p data-i18n="footer.copy">© جميع الحقوق محفوظة لـ مصطفى موفق – دريم ميديا.</p>
       </div>
-    </footer>
+  </footer>
 
-    <!-- Back to Top Button -->
-    <button id="back-to-top" class="back-to-top" aria-label="Back to top" title="Back to top">↑</button>
+  <div id="quick-actions" class="quick-actions top" aria-hidden="true">
+    <a class="chip" href="#about" data-i18n="nav.about">من هو مصطفى؟</a>
+    <a class="chip" href="#experience" data-i18n="nav.experience">الخبرة</a>
+    <a class="chip" href="#companies" data-i18n="nav.companies">الشركات</a>
+    <a class="chip" href="#training" data-i18n="nav.training">التدريب</a>
+    <a class="chip" href="#services" data-i18n="nav.services">الخدمات</a>
+    <a class="chip" href="#contact" data-i18n="nav.contact">تواصل</a>
+    <a class="chip" href="locations.html" data-i18n="nav.locations">أماكن الورش</a>
+  </div>
+  <button id="quick-actions-toggle" class="action-fab top" aria-label="إجراءات سريعة" data-i18n-aria="actions.quick" aria-controls="quick-actions" aria-expanded="false"><span class="icon">+</span></button>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top" title="Back to top">↑</button>
 
     <!-- سكربت تبديل الثيم (يحفظ الاختيار ويحدّث الأيقونة) -->
     <script>
@@ -663,8 +666,8 @@
       })();
     </script>
 
-    <!-- ربط ملف الترجمة الموحد -->
-    <script src="assets/i18n.js"></script>
+  <!-- ربط ملف الترجمة الموحد -->
+  <script src="assets/i18n.js"></script>
 
     <!-- Back to Top Functionality -->
     <script>

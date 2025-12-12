@@ -11,6 +11,7 @@ const translations = {
     "nav.contact": "تواصل",
     "nav.locations": "أماكن الورش",
     "nav.home": "الرئيسية",
+    "actions.quick": "إجراءات سريعة",
 
     "hero.title": "مصطفى موفق ",
     "hero.subtitle": "مدرّب أعمال – مستشار تسويق – رائد أعمال، مؤسس دريم ميديا و Forsa Academy وشريك مؤسس في فخامة.",
@@ -152,7 +153,7 @@ const translations = {
     "locations.title": "أماكن ورش العمل التي قُدمت",
     "locations.caption": "قائمة بالأماكن والمؤسسات التي قدّمتُ فيها ورش عمل وبرامج تدريبية — للاطلاع على التفاصيل أو طلب تكرار الورشة تواصل معي.",
     "location.1.title": "جامعة بغداد",
-    "location.1.date": "مارس 2024",
+    "location.1.date": "ديسمبر  2025",
     "location.1.venue": "كلية الإدارة/قاعة المحاضرات الرئيسية",
     "location.1.desc": "ورشة تدريبية مكثفة في التسويق الرقمي وتطبيقات الذكاء الاصطناعي لتحسين أداء فرق التسويق.",
     "location.2.title": "مركز فرصة للتدريب",
@@ -345,20 +346,20 @@ const translations = {
     "section.events.title": "المعارض والمؤتمرات",
     "section.events.subtitle": "الفعاليات والمؤتمرات التي نظمتها أو شاركت فيها",
     
-    "event.1.title": "Baghdad AI Summit 2024",
-    "event.1.date": "مايو 2024",
+    "event.1.title": "Baghdad AI Summit 2025",
+    "event.1.date": "ديسمبر  2025",
     "event.1.location": "بغداد - مركز المؤتمرات الدولي",
     "event.1.desc": "أكبر قمة ذكاء اصطناعي في العراق، جمعت خبراء محليين وعرب ومدربين وقادة صناعة من حول العالم لمناقشة تطبيقات الذكاء الاصطناعي في الأعمال.",
     "event.1.attendees": "500+ حاضر",
     
     "event.2.title": "Baghdad Real Estate Gathering 2024",
-    "event.2.date": "أبريل 2024",
+    "event.2.date": "أبريل 2025",
     "event.2.location": "بغداد - فندق الراشد",
     "event.2.desc": "حدث متخصص يجمع مطورين وعقاريين ومستثمرين لمناقشة استراتيجيات التسويق العقاري والفرص الاستثمارية في السوق العراقية.",
     "event.2.attendees": "300+ حاضر",
     
     "event.3.title": "Digital Marketing Summit 2023",
-    "event.3.date": "نوفمبر 2023",
+    "event.3.date": "نوفمبر 2024",
     "event.3.location": "بغداد - مركز التكنولوجيا",
     "event.3.desc": "قمة متخصصة في التسويق الرقمي والتجارة الإلكترونية، جمعت المسوقين والرواد والتقنيين لمشاركة أفضل الممارسات والاستراتيجيات الحديثة.",
     "event.3.attendees": "400+ حاضر",
@@ -382,6 +383,7 @@ const translations = {
     "nav.contact": "Contact",
     "nav.locations": "Workshop Locations",
     "nav.home": "Home",
+    "actions.quick": "Quick Actions",
 
     "hero.title": "Mostafa Muwafaq ",
     "hero.subtitle": "Business Trainer · Marketing Consultant · Entrepreneur — Founder of Dream Media and Forsa Academy; co‑founder at Fakhama.",
@@ -727,6 +729,20 @@ function setLanguage(lang) {
     if (dict[key] !== undefined) {
       if(el.dataset.html === "true") el.innerHTML = dict[key];
       else el.textContent = dict[key];
+    }
+  });
+
+  document.querySelectorAll('[data-i18n-alt]').forEach(el => {
+    const key = el.getAttribute('data-i18n-alt');
+    if (dict[key] !== undefined) {
+      el.setAttribute('alt', dict[key]);
+    }
+  });
+
+  document.querySelectorAll('[data-i18n-aria]').forEach(el => {
+    const key = el.getAttribute('data-i18n-aria');
+    if (dict[key] !== undefined) {
+      el.setAttribute('aria-label', dict[key]);
     }
   });
 

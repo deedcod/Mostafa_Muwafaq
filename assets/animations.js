@@ -136,14 +136,19 @@ document.addEventListener('DOMContentLoaded', function() {
         img.style.opacity = '0';
         img.style.transition = 'opacity 0.6s ease-out';
         
-        img.addEventListener('load', function() {
-            this.style.opacity = '1';
-        });
+        function reveal() { img.style.opacity = '1'; }
+        
+        if (img.complete && img.naturalWidth > 0) {
+            // الصورة محمّلة بالفعل قبل إضافة المستمعين
+            reveal();
+        } else {
+            img.addEventListener('load', reveal, { once: true });
+        }
         
         img.addEventListener('error', function() {
             this.style.display = 'none';
             if (this.parentNode) this.parentNode.classList.add('no-image');
-        });
+        }, { once: true });
     });
 
     // Mobile nav toggle مع أداء محسّن
@@ -179,5 +184,34 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    const qaToggle = document.getElementById('quick-actions-toggle');
+    const qa = document.getElementById('quick-actions');
+    if (qaToggle && qa) {
+        qaToggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            const open = qa.classList.toggle('open');
+            qaToggle.classList.toggle('open', open);
+            qaToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+            qa.setAttribute('aria-hidden', open ? 'false' : 'true');
+        });
+
+        document.addEventListener('click', function(e) {
+            if (!qa.contains(e.target) && !qaToggle.contains(e.target) && qa.classList.contains('open')) {
+                qa.classList.remove('open');
+                qaToggle.classList.remove('open');
+                qaToggle.setAttribute('aria-expanded', 'false');
+                qa.setAttribute('aria-hidden', 'true');
+            }
+        }, { passive: true });
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && qa.classList.contains('open')) {
+                qa.classList.remove('open');
+                qaToggle.classList.remove('open');
+                qaToggle.setAttribute('aria-expanded', 'false');
+                qa.setAttribute('aria-hidden', 'true');
+            }
+        });
+    }
     console.log('✨ Professional animations loaded successfully!');
 });

@@ -69,21 +69,23 @@
       <div class="locations-grid grid cards-grid">
         <!-- مثال بطاقة مكان -->
         <article class="location-card">
-          <div class="loc-meta">
-            <h3 data-i18n="location.1.title">جامعة بغداد</h3>
+  <img class="loc-image" src="https://placehold.co/320x180/png?text=University+of+Baghdad" alt="جامعة بغداد" data-i18n-alt="location.1.title">
+  <div class="loc-meta">
+    <h3 data-i18n="location.1.title">جامعة بغداد</h3>
             <span class="dates" data-i18n="location.1.date">مارس 2024</span>
           </div>
           <div class="venue" data-i18n="location.1.venue">كلية الإدارة/قاعة المحاضرات الرئيسية</div>
           <p class="desc" data-i18n="location.1.desc">ورشة تدريبية مكثفة في التسويق الرقمي وتطبيقات الذكاء الاصطناعي لتحسين أداء فرق التسويق.</p>
-          <div class="actions">
-            <a class="btn outline" data-i18n="location.map" href="https://maps.google.com" target="_blank" rel="noopener">عرض على الخريطة</a>
+  <div class="actions">
+    <a class="btn outline" data-i18n="location.map" href="https://www.google.com/maps/search/?api=1&query=University%20of%20Baghdad" target="_blank" rel="noopener">عرض على الخريطة</a>
             <a class="btn outline" data-i18n="location.request" href="mailto:info@dreammedia.com">اطلب إعادة الورشة</a>
           </div>
         </article>
 
         <article class="location-card">
-          <div class="loc-meta">
-            <h3 data-i18n="location.2.title">مركز فرصة للتدريب</h3>
+  <img class="loc-image" src="https://placehold.co/320x180/png?text=Forsa+Training+Center" alt="مركز فرصة للتدريب" data-i18n-alt="location.2.title">
+  <div class="loc-meta">
+    <h3 data-i18n="location.2.title">مركز فرصة للتدريب</h3>
             <span class="dates" data-i18n="location.2.date">أكتوبر 2023</span>
           </div>
           <div class="venue" data-i18n="location.2.venue">بغداد - شارع الرشيد</div>
@@ -95,14 +97,15 @@
         </article>
 
         <article class="location-card">
-          <div class="loc-meta">
-            <h3 data-i18n="location.3.title">شركة XYZ للاتصالات</h3>
+  <img class="loc-image" src="https://placehold.co/320x180/png?text=XYZ+Communications+Company" alt="شركة XYZ للاتصالات" data-i18n-alt="location.3.title">
+  <div class="loc-meta">
+    <h3 data-i18n="location.3.title">شركة XYZ للاتصالات</h3>
             <span class="dates" data-i18n="location.3.date">نوفمبر 2022</span>
           </div>
           <div class="venue" data-i18n="location.3.venue">البصرة - مقر الشركة</div>
           <p class="desc" data-i18n="location.3.desc">ورشة داخلية لتحويل فرق التسويق للعمل بمنهجية تعتمد على البيانات وتحليل الحملات.</p>
-          <div class="actions">
-            <a class="btn outline" data-i18n="location.map" href="https://maps.google.com" target="_blank" rel="noopener">عرض على الخريطة</a>
+  <div class="actions">
+    <a class="btn outline" data-i18n="location.map" href="https://www.google.com/maps/search/?api=1&query=XYZ%20Communications%20Basra" target="_blank" rel="noopener">عرض على الخريطة</a>
             <a class="btn outline" data-i18n="location.request" href="mailto:info@dreammedia.com">اطلب إعادة الورشة</a>
           </div>
         </article>
@@ -117,6 +120,17 @@
       <p data-i18n="footer.copy">© جميع الحقوق محفوظة لـ مصطفى موفق – دريم ميديا.</p>
     </div>
   </footer>
+
+  <div id="quick-actions" class="quick-actions top" aria-hidden="true">
+    <a class="chip" href="index.html#about" data-i18n="nav.about">من هو مصطفى؟</a>
+    <a class="chip" href="index.html#experience" data-i18n="nav.experience">الخبرة</a>
+    <a class="chip" href="index.html#companies" data-i18n="nav.companies">الشركات</a>
+    <a class="chip" href="index.html#training" data-i18n="nav.training">التدريب</a>
+    <a class="chip" href="index.html#services" data-i18n="nav.services">الخدمات</a>
+    <a class="chip" href="index.html#contact" data-i18n="nav.contact">تواصل</a>
+    <a class="chip" href="locations.html" data-i18n="nav.locations">أماكن الورش</a>
+  </div>
+  <button id="quick-actions-toggle" class="action-fab top" aria-label="إجراءات سريعة" data-i18n-aria="actions.quick" aria-controls="quick-actions" aria-expanded="false"><span class="icon">+</span></button>
 
   <!-- Back to Top Button -->
   <button id="back-to-top" class="back-to-top" aria-label="Back to top" title="Back to top">↑</button>
